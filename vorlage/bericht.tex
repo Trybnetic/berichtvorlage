@@ -1,0 +1,72 @@
+\documentclass[a4paper, 12pt, german, titlepage]{article}
+% Packages
+\usepackage[german]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{newtxtext,newtxmath}
+\usepackage[margin=3.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{apacite}
+
+
+% % % % % % % % % % % % %
+
+\newcommand{\name}{} %TODO hier deinen Nachnamen eintragen
+\newcommand{\vorname}{} %TODO hier deinen Vornamen eintragen
+\newcommand{\matrikelnr}{} %TODO hier deine Matrikelnummer eintragen
+\newcommand{\betreuerIn}{} %TODO hier den Namen deines Betreuers oder deiner Betreuerin eintragen
+\newcommand{\institut}{} %TODO hier den Namen des Instituts angeben
+\newcommand{\fachbereich}{} %TODO hier den Namen des Fachbereichs angeben
+\newcommand{\titel}{} %TODO hier den Titel deines Berichts eintragen
+
+% % % % % % % % % % % % %
+
+% % % % % STYLE % % % % %
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{%
+\markboth {#1}{}}
+\fancyhead[L]{\titel}
+\fancyhead[R]{\leftmark}
+% % % % % % % % % % % % %
+
+% % % % % % % % % % % % %
+\begin{document}
+	% Titelseite
+	\input{abschnitte/title}
+	
+	% Unterdrueckt Einrueckungen nach Absatz
+	\noindent
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%        Hier beginnt der Inhalt         %%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	% Inhaltsverzeichnis
+	\tableofcontents
+	\newpage
+	
+	\section{Abstract}
+	\input{abschnitte/abstract}
+	
+	\section{Einleitung}
+	\input{abschnitte/einleitung}
+	
+	\section{Methode}
+	\input{abschnitte/methode}
+	
+	\section{Ergebnisse}
+	\input{abschnitte/ergebnisse}
+	
+	\section{Diskussion}
+	\input{abschnitte/diskussion}
+	
+	\bibliographystyle{apacite}
+	\bibliography{references.bib}
+
+	\newpage
+	\section*{Erklärung}
+	\input{abschnitte/erklaerung}
+\end{document}
