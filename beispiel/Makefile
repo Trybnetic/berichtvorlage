@@ -1,3 +1,5 @@
+default: bericht
+
 bericht:
 	pdflatex -synctex=1 -interaction=nonstopmode -halt-on-error -file-line-error "bericht".tex
 	biber "bericht"
@@ -11,5 +13,3 @@ distclean: clean
 	rm bericht.pdf
 
 pdf: bericht clean
-
-default: bericht
