@@ -7,7 +7,6 @@ bericht:
 
 clean:
 	rm -f *.bbl *.blg *.log *.out *.synctex.gz *.toc *.aux *.bcf *.run.xml
-	rm -rf auto/ */auto/
 
 distclean: clean
 	rm bericht.pdf
