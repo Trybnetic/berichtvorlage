@@ -1,6 +1,7 @@
 \documentclass[a4paper, 12pt, german, titlepage]{article}
 % Packages
-\usepackage[german]{babel}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{fancyhdr}
 \usepackage{newtxtext,newtxmath}
@@ -9,8 +10,15 @@
 \usepackage[onehalfspacing]{setspace}
 \usepackage{caption}
 \usepackage{subcaption}
-\usepackage{apacite}
+\usepackage{booktabs}
 
+% % % % % % % % % % % % %
+
+\usepackage{csquotes}
+\usepackage[safeinputenc,style=apa,sortcites=true,sorting=nyt,backend=biber]{biblatex}
+\DeclareLanguageMapping{ngerman}{ngerman-apa}
+\DeclareLanguageMapping{american}{american-apa}
+\addbibresource{references.bib}
 
 % % % % % % % % % % % % %
 
@@ -63,8 +71,7 @@
 	\section{Diskussion}
 	\input{abschnitte/diskussion}
 	
-	\bibliographystyle{apacite}
-	\bibliography{references.bib}
+	\printbibliography
 
 	\newpage
 	\section*{Erklärung}
